@@ -137,7 +137,7 @@ const generateTable = function () {
     element.style.border = "1px solid #000";
   });
 };
-//generateTable();
+generateTable();
 /* ESERCIZIO 12
           Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
        */
@@ -155,14 +155,15 @@ const addRow = function () {
     element.style.border = "1px solid #000";
   });
 };
-//addRow();
+addRow();
 /* ESERCIZIO 14
          Crea una funzione che nasconda le immagini della tabella quando eseguita
        */
 
 const hideAllImages = function () {
-  document.getElementById("element").style.display = "none";
+  document.querySelector("table").style.display = "none";
 };
+//hideAllImages();
 
 /* EXTRA ESERCIZIO 15
          Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
@@ -189,10 +190,10 @@ const changeColorWithRandom = function () {
        */
 
 const deleteVowels = function () {
-  const elements = document.getElementsByTagName("*");
-  console.log(elements);
-  for (let i; i < elements.length; i++) {
-    elements[i].innerText = elements[i].innerText.replace(/[aeiou]/gi, "");
-  }
+  document.body.innerHTML = document.body.innerHTML.replace(/a/g, "");
+  document.body.innerHTML = document.body.innerHTML.replace(/e/g, "");
+  document.body.innerHTML = document.body.innerHTML.replace(/i/g, "");
+  document.body.innerHTML = document.body.innerHTML.replace(/o/g, "");
+  document.body.innerHTML = document.body.innerHTML.replace(/u/g, "");
 };
 deleteVowels();
